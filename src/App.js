@@ -7,6 +7,7 @@ import About from './About';
 import Contect from './Contect';
 import Product from './Product';
 import Headar from './Headar';
+import Maltipalcard from './Maltipalcard';
 
 // import Exampale from './Exampale';
 
@@ -21,6 +22,7 @@ function App() {
          <Route path='/about' element = {<About/>} />
          <Route path='/contect' element = {<Contect/>} />
          <Route path='/product' element = {<Product/>} />
+         <Route path='/maltipalcard' element = {<Maltipalcard/>} />
        
        </Routes>
      </BrowserRouter>
