@@ -1,11 +1,16 @@
 import React from 'react';
-import Headar from './Headar';
+import image from "./image/image 4.avif";
+
 
 function Contect (){
     return(
     <>
-    <Headar/>
     <h1>Contect page</h1>
+    <div className='container'>
+        <div className='pic'>
+        <img src={image} alt=''/>
+        </div>
+    </div> 
     </>
     );
 }

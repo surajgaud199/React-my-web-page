@@ -19,14 +19,24 @@ import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { Link } from 'react-router-dom';
 import "./headar.css"
+import { Outlet } from 'react-router-dom';
+import logo from '../image/logo2.png';
+
+
+
 
 export default function Headar() {
   const [openBasic, setOpenBasic] = useState(false);
 
   return (
+    <>
     <MDBNavbar expand='lg' light bgColor='light'>
       <MDBContainer fluid>
-        <MDBNavbarBrand href='#'>Brand</MDBNavbarBrand>
+        <MDBNavbarBrand href='#'>
+         <div className='logo'>
+          <img src={logo} alt=''/>
+         </div>
+        </MDBNavbarBrand>
 
         <MDBNavbarToggler
           aria-controls='navbarSupportedContent'
@@ -41,7 +51,7 @@ export default function Headar() {
           <MDBNavbarNav className='mr-auto mb-2 mb-lg-0'>
             <MDBNavbarItem>
               <MDBNavbarLink active aria-current='page'>
-                <Link className='color' to="/">Home</Link>
+                <Link className='color' to="/home">Home</Link>
               </MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
@@ -65,7 +75,7 @@ export default function Headar() {
               </MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
-              <MDBNavbarLink href='#'>Link</MDBNavbarLink>
+              <MDBNavbarLink>Link</MDBNavbarLink>
             </MDBNavbarItem>
 
             <MDBNavbarItem>
@@ -95,6 +105,8 @@ export default function Headar() {
         </MDBCollapse>
       </MDBContainer>
     </MDBNavbar>
+    <Outlet/>
+    </>
   );
 }
 // import React from 'react';
