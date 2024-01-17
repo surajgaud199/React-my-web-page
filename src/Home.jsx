@@ -1,6 +1,7 @@
 import React from 'react';
 // import Headar from './Headar';
 import Card from './Card'
+import ReactJSLists from './ReactJS Lists';
 
 
 function Home (){
@@ -14,6 +15,7 @@ function Home (){
      <div>
      <img src={require('./image/Image 1.webp')} alt=''/>
      </div>
+     <ReactJSLists/>
      </div>
      
    
